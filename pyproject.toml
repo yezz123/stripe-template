@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stripe-template"
+description = 'Template for integrating stripe into your FastAPI application'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = [
+  "stripe",
+  "fastapi",
+  "template",
+]
+authors = [
+  { name = "Yasser Tahiri", email = "hello@yezz.me" },
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+  "fastapi",
+  "stripe",
+  "pydantic[email]",
+  "python-dotenv",
+  "python-decouple",
+  "uvicorn",
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/yezz123/stripe-template#readme"
+Issues = "https://github.com/yezz123/stripe-template/issues"
+Source = "https://github.com/yezz123/stripe-template"
+
+[project.optional-dependencies]
+lint = [
+    "pre-commit==2.21.0",
+]
+test = [
+    "pytest==7.2.0",
+    "pytest-asyncio == 0.20.3",
+    "pytest-mock",
+    "requests==2.28.2",
+    "uvicorn==0.20.0",
+    "asynctest==0.13.0",
+    "codecov==2.1.12",
+    "pytest-cov==4.0.0",
+    "websockets==10.4",
+    "uvloop==0.17.0",
+    "httpx"
+]
+
+[tool.hatch.version]
+path = "app/__init__.py"
