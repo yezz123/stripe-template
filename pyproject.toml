@@ -40,7 +40,7 @@ Source = "https://github.com/yezz123/stripe-template"
 
 [project.optional-dependencies]
 lint = [
-    "pre-commit==2.21.0",
+    "pre-commit==3.0.1",
 ]
 test = [
     "pytest==7.2.1",
